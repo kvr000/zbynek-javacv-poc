@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.github.kvr000.poc.javacv</groupId>
+	<artifactId>javacv-poc-base</artifactId>
+	<packaging>pom</packaging>
+	<version>0.0.1</version>
+	<name>JavaCv PoC</name>
+	<description>Parent of JavaCv PoC</description>
+
+	<properties>
+		<javac.version>17</javac.version>
+
+		<maven-compiler-plugin.version>3.12.1</maven-compiler-plugin.version>
+		<maven-shade-plugin.version>3.4.1</maven-shade-plugin.version>
+
+		<lombok.version>1.18.32</lombok.version>
+
+		<log4j.version>2.23.1</log4j.version>
+
+		<javacv.version>1.5.11</javacv.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-core</artifactId>
+				<version>${log4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-api</artifactId>
+				<version>${log4j.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.bytedeco</groupId>
+				<artifactId>javacv</artifactId>
+				<version>${javacv.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.bytedeco</groupId>
+				<artifactId>javacv-platform</artifactId>
+				<version>${javacv.version}</version>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+</project>
